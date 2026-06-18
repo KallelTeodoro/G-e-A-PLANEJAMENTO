@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&A Planejados | Móveis Planejados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-white">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-blue-900 rounded-xl flex items-center justify-center text-white font-bold text-2xl">G</div>
+                <div>
+                    <span class="heading-font text-2xl font-bold tracking-tight">G&amp;A</span>
+                    <span class="block text-xs -mt-1 text-zinc-500">Planejados</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-blue-700 transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-blue-700 transition-colors">Serviços</a>
+                <a href="#projetos" class="hover:text-blue-700 transition-colors">Projetos</a>
+                <a href="#sobre" class="hover:text-blue-700 transition-colors">Sobre</a>
+                <a href="#contato" class="hover:text-blue-700 transition-colors">Contato</a>
+            </div>
+
+            <button onclick="abrirOrcamento()" 
+                    class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2.5 rounded-2xl text-sm font-semibold transition-all flex items-center gap-2">
+                <i class="fas fa-calculator"></i>
+                <span>Orçamento Grátis</span>
+            </button>
+
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h1 class="heading-font text-6xl md:text-7xl font-bold leading-tight mb-6">
+                Transformando espaços<br>em ambientes inteligentes
+            </h1>
+            <p class="text-xl md:text-2xl mb-10 text-zinc-200 max-w-2xl mx-auto">
+                Projetos 3D de móveis planejados para residências e empresas com excelência em design e funcionalidade.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="document.getElementById('contato').scrollIntoView({ behavior: 'smooth' })" 
+                        class="bg-white text-blue-900 hover:bg-zinc-100 px-10 py-4 rounded-3xl font-semibold text-lg transition-all">
+                    Solicitar Projeto
+                </button>
+                <button onclick="document.getElementById('projetos').scrollIntoView({ behavior: 'smooth' })" 
+                        class="border-2 border-white hover:bg-white/10 px-10 py-4 rounded-3xl font-semibold text-lg transition-all">
+                    Ver Projetos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-semibold tracking-widest">O QUE FAZEMOS</span>
+                <h2 class="heading-font text-5xl font-bold mt-2">Nossos Serviços</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-hover bg-white border border-zinc-100 rounded-3xl p-8 group">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-700 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Projetos 3D</h3>
+                    <p class="text-zinc-600">Visualização realista dos seus móveis antes da fabricação. Renderizações fotorealistas.</p>
+                </div>
+
+                <div class="card-hover bg-white border border-zinc-100 rounded-3xl p-8 group">
+                    <div class="w-16 h-16 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Planejamento de Ambientes</h3>
+                    <p class="text-zinc-600">Cozinhas, quartos, salas, escritórios e áreas comerciais.</p>
+                </div>
+
+                <div class="card-hover bg-white border border-zinc-100 rounded-3xl p-8 group">
+                    <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">Consultoria de Decoração</h3>
+                    <p class="text-zinc-600">Aproveitamento inteligente de espaços e harmonia visual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-20 bg-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-5xl font-bold">Projetos em Destaque</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="rounded-3xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://picsum.photos/id/201/600/400" class="w-full h-64 object-cover" alt="Cozinha">
+                    <div class="p-6 bg-white">
+                        <span class="text-xs uppercase text-amber-600">Cozinha</span>
+                        <h4 class="font-semibold text-xl mt-1">Cozinha Moderna Integrada</h4>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://picsum.photos/id/251/600/400" class="w-full h-64 object-cover" alt="Quarto">
+                    <div class="p-6 bg-white">
+                        <span class="text-xs uppercase text-emerald-600">Quarto</span>
+                        <h4 class="font-semibold text-xl mt-1">Suíte com Closet</h4>
+                    </div>
+                </div>
+                <div class="rounded-3xl overflow-hidden shadow-lg card-hover">
+                    <img src="https://picsum.photos/id/866/600/400" class="w-full h-64 object-cover" alt="Escritório">
+                    <div class="p-6 bg-white">
+                        <span class="text-xs uppercase text-blue-600">Escritório</span>
+                        <h4 class="font-semibold text-xl mt-1">Home Office Funcional</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="heading-font text-5xl font-bold leading-tight">G&amp;A Planejados</h2>
+                    <p class="mt-6 text-lg text-zinc-600">
+                        Especialistas em projetos de móveis planejados com foco em funcionalidade, design e otimização de espaços.
+                    </p>
+                </div>
+                <div class="bg-zinc-900 text-white p-10 rounded-3xl">
+                    <p class="italic text-lg">"Transformando espaço em ambientes inteligentes"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="heading-font text-5xl font-bold mb-6">Vamos planejar seu espaço?</h2>
+                    <p class="text-zinc-600 mb-8">Entre em contato e transforme sua ideia em realidade.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <i class="fas fa-phone text-3xl text-blue-600"></i>
+                            <div>
+                                <div class="font-medium">(11) 98765-4321</div>
+                                <div class="text-sm text-zinc-500">WhatsApp</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fas fa-envelope text-3xl text-blue-600"></i>
+                            <div class="font-medium">contato@gaplanejados.com.br</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-50 p-8 rounded-3xl">
+                    <form id="contactForm">
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="text" placeholder="Nome" required class="w-full px-5 py-3 rounded-2xl border border-zinc-200">
+                            <input type="tel" placeholder="Telefone" required class="w-full px-5 py-3 rounded-2xl border border-zinc-200">
+                        </div>
+                        <select class="mt-5 w-full px-5 py-3 rounded-2xl border border-zinc-200">
+                            <option>Cozinha</option>
+                            <option>Quarto / Closet</option>
+                            <option>Escritório</option>
+                            <option>Sala</option>
+                            <option>Outro</option>
+                        </select>
+                        <textarea rows="5" placeholder="Descreva seu projeto..." class="mt-5 w-full px-5 py-3 rounded-3xl border border-zinc-200"></textarea>
+                        
+                        <button type="submit" 
+                                class="mt-8 w-full bg-blue-900 text-white py-4 rounded-3xl font-semibold text-lg hover:bg-blue-800 transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-zinc-900 text-zinc-400 py-12 text-center">
+        <p class="text-lg">“Transformando espaço em ambientes inteligentes”</p>
+        <p class="mt-4">© 2026 G&amp;A Planejados - Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
