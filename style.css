@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
 
 :root {
-    --primary: #1e3a8a;
+    --verde-escuro: #0F2C23;
+    --dourado: #D4AF37;
+    --dourado-claro: #E8C76B;
 }
 
 body {
@@ -12,16 +14,44 @@ body {
     font-family: 'Playfair Display', sans-serif;
 }
 
+/* Cores principais baseadas na logo */
 .hero-bg {
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), 
+    background: linear-gradient(rgba(15, 44, 35, 0.75), rgba(15, 44, 35, 0.85)), 
                 url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
 }
 
+.bg-primary {
+    background-color: var(--verde-escuro);
+}
+
+.text-primary {
+    color: var(--verde-escuro);
+}
+
+.text-gold {
+    color: var(--dourado);
+}
+
+.bg-gold {
+    background-color: var(--dourado);
+}
+
+/* Navbar */
 .nav-scrolled {
     background-color: rgba(255, 255, 255, 0.98) !important;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
+/* Botões */
+button.bg-primary {
+    background-color: var(--verde-escuro);
+}
+
+button.bg-primary:hover {
+    background-color: #0A211B;
+}
+
+/* Cards */
 .card-hover {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -30,3 +60,13 @@ body {
     transform: translateY(-12px);
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
+
+/* Logo no topo */
+.w-10.h-10.bg-primary {
+    background-color: var(--verde-escuro);
+}
+
+/* Outros ajustes */
+.text-blue-900 { color: var(--verde-escuro); }
+.bg-blue-900 { background-color: var(--verde-escuro); }
+.border-blue-900 { border-color: var(--verde-escuro); }
